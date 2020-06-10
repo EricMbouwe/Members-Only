@@ -2,16 +2,20 @@
 
 <table>
 <tr>
-<th>User Name</th>
+<th>Name</th>
+<th>Is Admin</th>
 <th>Is Member</th>
 <th>Update</th>
 </tr>
 <% @users.each do |u| %>
   
-  <%= form_for(@user) do |f| %>
+  <%= form_for(u) do |f| %>
+    <tr>
     <td><%= u.name %></td>
-    <td><%= f.check_box_tag :is_member, 'yes', true %></td>
+    <td><%= f.check_box :is_admin %></td>
+    <td><%= f.check_box :is_member %></td>
     <td><%= f.submit 'Set' %></td>
+    </tr>
   <%end %>
 <% end %>
 </table>

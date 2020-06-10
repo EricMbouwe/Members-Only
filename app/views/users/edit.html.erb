@@ -1,0 +1,6 @@
+<%= @user.name %>
+<%= form_for(@user) do |f| %>
+  <%= label_tag(:is_member, "Is Member") %>
+  <%= f.check_box :is_member %>
+  <%= f.submit %>
+<% end %>

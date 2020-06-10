@@ -5,16 +5,25 @@ class UsersController < ApplicationController
   end
 
   def update
+
     @user = User.find(params[:id])
-    @user.is_member = params[:is_member]
+    @user.is_admin = params[:user][:is_admin]
+    @user.is_member = params[:user][:is_member]
     @user.save
 
+
+    redirect_to users_path
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
+
   def edit
-    guard
-    
-    @user = User.find(:id)
+    # byebug
+
+    @user = User.find(params[:id])
 
   end
 end
