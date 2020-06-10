@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'rubocop'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 
+gem 'better_errors', '~> 2.4'
+gem 'guard', '~> 2.16', '>= 2.16.2'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

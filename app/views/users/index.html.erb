@@ -1,0 +1,17 @@
+<h1>Members List</h1>
+
+<table>
+<tr>
+<th>User Name</th>
+<th>Is Member</th>
+<th>Update</th>
+</tr>
+<% @users.each do |u| %>
+  
+  <%= form_for(@user) do |f| %>
+    <td><%= u.name %></td>
+    <td><%= f.check_box_tag :is_member, 'yes', true %></td>
+    <td><%= f.submit 'Set' %></td>
+  <%end %>
+<% end %>
+</table>

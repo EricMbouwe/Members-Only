@@ -1,0 +1,15 @@
+<%= form_for(@post) do |f| %>
+  <ul>
+  <% @post.errors.full_messages.each do |e| %>
+    <li class="red"><%= e %></li>
+  <% end %>
+  </ul>
+
+  <%= f.label 'Title' %><br>
+  <%= f.text_field :title, autofocus: true %><br>
+  <%= f.label 'Body' %><br>
+  <%= f.text_area :body, placeholder: "Compose a new post...", size: "30x10"  %><br>
+
+  <%= f.submit 'Add New Post' %>
+
+<% end %>
