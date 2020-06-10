@@ -9,10 +9,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.is_admin = params[:user][:is_admin]
     @user.is_member = params[:user][:is_member]
-    @user.save
-
-
-    redirect_to users_path
+    if @user.save
+      flash.notice = "User '#{@user.name}' successfully updated!"
+      redirect_to users_path
+    else
+      flash.alert = "Update failed"
+      redirect_to users_path
+    end
   end
 
   def show
@@ -21,8 +24,6 @@ class UsersController < ApplicationController
 
 
   def edit
-    # byebug
-
     @user = User.find(params[:id])
 
   end
