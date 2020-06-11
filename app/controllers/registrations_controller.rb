@@ -1,7 +1,6 @@
 class RegistrationsController <  Devise::RegistrationsController
 
 
-
   def create
     is_admin = User.all.count.zero?
 

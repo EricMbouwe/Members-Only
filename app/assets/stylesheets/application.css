@@ -19,11 +19,12 @@ html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 .container {
   padding: 10px;
-  width: 900px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -54,11 +55,16 @@ input[type="submit"] {
 
 .notification {
   width: 100%;
-  padding: 5px;
   position: relative;
   top: 0;
   text-align: center;
   font-weight: bolder;
+  padding: 10px;
+}
+
+.notice,
+.alert {
+  margin: 0;
 }
 
 .is-primary {
