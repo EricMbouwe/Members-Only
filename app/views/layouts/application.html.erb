@@ -23,13 +23,13 @@
   <% end %>
 
   <div class="container">
-    <div class= menu>
+    <div class="menu">
       <%= link_to "Home", root_path %>
       <% if user_signed_in? %>
         <span><%= current_user.name %></span>
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info" %>
         <% if current_user.is_admin %>
-          <%= link_to 'Members List', users_path  %>
+          <%= link_to 'Members List', users_path %>
         <% end %>
       <% else %>
         <%= link_to 'Log In', new_user_session_path, class: "button is-info" %>

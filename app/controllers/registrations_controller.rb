@@ -6,18 +6,13 @@ class RegistrationsController <  Devise::RegistrationsController
 
     @user = User.new(sign_up_params)
     @user.is_admin = is_admin
-    if is_admin
-      @user.is_member = is_admin
-    else
-      @user.is_member = true
-    end
+    # @user.is_member = false
 
     @user.save
 
     redirect_to root_path
     
   end
-  
   
   private
 
