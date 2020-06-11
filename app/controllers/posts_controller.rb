@@ -7,13 +7,18 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
+  end
 
+  def edit
+    @post = Post.find(params[:id])
   end
   
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
 
+    # flash.alert = "Title and body can not be empty!" unless 
     @post.save
 
     redirect_to root_path

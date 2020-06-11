@@ -132,9 +132,21 @@ input[type="submit"] {
   color: black;
   cursor: pointer;
   margin-top: 10px;
+  outline: none;
 }
 
-input[type="text"] {
+input[type="submit"]:hover {
+  box-shadow: 0 0 4px 4px #ccc;
+}
+
+input[type="submit"]:active {
+  box-shadow: 0 0 2px 2px #ccc;
+  border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   padding: 5px;
   font-size: large;
 }

@@ -1,11 +1,19 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user! 
   
   def index
+    unless current_user.is_admin
+      flash.alert = 'You must be an administrator to access users page'
+      redirect_to root_path
+    end
     @users = User.all
   end
 
   def update
+    unless current_user.is_admin
+      flash.alert = "You must be an administrator to access users page"
+      redirect_to root_path
+    end
 
     @user = User.find(params[:id])
     @user.is_admin = params[:user][:is_admin]
@@ -19,11 +27,19 @@ class UsersController < ApplicationController
   end
 
   def show
+    unless current_user.is_admin
+      flash.alert = "You must be an administrator to access users page"
+      redirect_to root_path
+    end
     @user = User.find(params[:user][:id])
   end
 
 
   def edit
+    unless current_user.is_admin
+      flash.alert = "You must be an administrator to access users page"
+      redirect_to root_path
+    end
     @user = User.find(params[:user][:id])
 
   end
