@@ -24,8 +24,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem 'rubocop'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'rubocop'
 
 gem 'better_errors', '~> 2.4'
 gem 'guard', '~> 2.16', '>= 2.16.2'

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.all.order("created_at DESC")
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new
@@ -13,21 +13,20 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
-  
+
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
 
-    unless  @post.save
-      flash.alert = "Title and body can not be empty!" 
-    end
+    flash.alert = 'Title and body can not be empty!' unless @post.save
+
     redirect_to root_path
   end
 
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-  
+
     redirect_to root_path
   end
 
@@ -36,5 +35,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body)
   end
-
 end
