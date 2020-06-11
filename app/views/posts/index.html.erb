@@ -4,15 +4,17 @@
   <%= render 'form' %>
 <% end %>
 
-<hr/>
-<% @posts.each do |p| %>
-  <p><%= p.title %></p>
-  <p><%= p.body %></p>
-  <% if user_signed_in? %>
-    <% if current_user.is_member %>
-      <p><%= p.user.name %></p>
-    <% end %>
-  <% end %>
+<div class="posts">
   <hr/>
+  <% @posts.each do |p| %>
+    <p><%= p.title %></p>
+    <p><%= p.body %></p>
+    <% if user_signed_in? %>
+      <% if current_user.is_member %>
+        <p class="author"><%= p.user.name %></p>
+      <% end %>
+    <% end %>
+    <hr/>
 
-<% end %>
+  <% end %>
+</div>

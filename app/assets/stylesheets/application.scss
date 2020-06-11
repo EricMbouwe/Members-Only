@@ -51,6 +51,7 @@ a {
   text-transform: capitalize;
   color: indigo;
   padding: 0 20px;
+  font-style: italic;
 }
 
 .menu a {
@@ -61,8 +62,9 @@ a {
   text-decoration: underline;
 }
 
-.text-label {
-  margin-top: 20px;
+label {
+  display: inline-block;
+  margin: 20px 0 5px 0;
 }
 
 .form-label {
@@ -129,14 +131,12 @@ input[type="submit"] {
   background-color: white;
   color: black;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 input[type="text"] {
-  padding: 10px;
+  padding: 5px;
   font-size: large;
-  margin-top: 10px;
-
 }
 
 .form_paragraph {
@@ -146,4 +146,15 @@ input[type="text"] {
 
   height: 40px;
   border: 1px solid black;
+}
+
+.posts {
+  margin: 40px 0;
+}
+
+.posts .author {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: indigo;
+  font-style: italic;
 }
