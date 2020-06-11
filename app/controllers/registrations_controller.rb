@@ -1,17 +1,17 @@
 class RegistrationsController <  Devise::RegistrationsController
 
-
   def create
     is_admin = User.all.count.zero?
 
     @user = User.new(sign_up_params)
     @user.is_admin = is_admin
-    # @user.is_member = false
 
-    @user.save
-
-    redirect_to root_path
-    
+    if @user.save
+      redirect_to root_path
+    else
+      # flash.alert = "Invalid details"
+      render :new
+    end
   end
   
   private

@@ -9,6 +9,7 @@ html {
   padding: 10px;
   max-width: 900px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 a {
@@ -146,9 +147,17 @@ input[type="submit"]:active {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+textarea {
   padding: 5px;
   font-size: large;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.title-box,
+textarea {
+  width: 98%;
 }
 
 .form_paragraph {
@@ -169,4 +178,14 @@ input[type="password"] {
   font-weight: 500;
   color: indigo;
   font-style: italic;
+  text-align: right;
+}
+
+.post-title {
+  text-decoration: underline;
+  color: black;
+}
+
+.post-body {
+  color: #555;
 }

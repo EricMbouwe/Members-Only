@@ -1,5 +1,11 @@
 <h1>Posts</h1>
 
+<ul>
+<% @post.errors.full_messages.each do |e| %>
+  <li class="red"><%= e %></li>
+<% end %>
+</ul>
+
 <% if user_signed_in? %>
   <%= render 'form' %>
 <% end %>
@@ -7,11 +13,11 @@
 <div class="posts">
   <hr/>
   <% @posts.each do |p| %>
-    <p><%= p.title %></p>
-    <p><%= p.body %></p>
+    <p class="post-title"><%= p.title %></p>
+    <p class="post-body"><%= p.body %></p>
     <% if user_signed_in? %>
       <% if current_user.is_member %>
-        <p class="author"><%= p.user.name %></p>
+        <p class="author"><%= p.user ? p.user.name : 'unknown author' %></p>
       <% end %>
     <% end %>
     <hr/>

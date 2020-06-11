@@ -18,11 +18,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
 
-    # flash.alert = "Title and body can not be empty!" unless 
-    @post.save
-
+    unless  @post.save
+      flash.alert = "Title and body can not be empty!" 
+    end
     redirect_to root_path
-
   end
 
   def update
