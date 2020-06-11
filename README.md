@@ -41,19 +41,22 @@
   </p>
 </p>
 
-This is blog style application which lets users sign up and add posts related to their account.  
+This is a blog style application which lets users sign up and add posts related to their account.  
 
-<br />
+<hr />
+
+## Application Screen Shots  
+
 <img src="app/assets/images/signup.png" alt="program interface">
-<br />
+<hr />
 <img src="app/assets/images/login.png" alt="program interface">
-<br />
+<hr />
 <img src="app/assets/images/posts.png" alt="program interface">
-<br />
+<hr />
 <img src="app/assets/images/posts-loggedin.png" alt="program interface">
-<br />
+<hr />
 <img src="app/assets/images/members.png" alt="program interface">
-<br />
+<hr />
 
 <!-- TABLE OF CONTENTS -->
 
@@ -98,12 +101,12 @@ This is blog style application which lets users sign up and add posts related to
 
 ## Application Instructions  
 
-  - Initially the application shows all the posts stored in the database, but can not add new posts and can not see the author of them  
+  - Initially the application shows all the posts stored in the database, but users can not add new posts and can not see the author of them  
   - New users must sign up and give a name, an email address and a password  
   - Using email and password they can log in  
   - A user has to log in in order to be able to add new posts.  
   - The first user which signs up is asigned an Administrator status property, so has access to other users properties by a provided menu option (Members List).  
-  - An administrator can asign Administrative and Member statuses to other users.   
+  - An administrator can asign Administrative and Membership statuses to other users.   
   - Each user has to be asigned a Member status property by an administrator user, in order to see the author of each post.  
 
 
@@ -164,7 +167,8 @@ This project was built using these technologies.
 - E-mail: ericmbouwe@gmail.com
 
 :bust_in_silhouette: **Author_2**
-​## Ioannis Kousis
+​
+## Ioannis Kousis
 
 - Github: [@ioanniskousis](https://github.com/ioanniskousis)
 - Twitter: [@ioanniskousis](https://twitter.com/ioanniskousis)
