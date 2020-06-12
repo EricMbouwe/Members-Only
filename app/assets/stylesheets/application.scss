@@ -1,0 +1,191 @@
+body, 
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  padding: 10px;
+  max-width: 900px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  margin: 10px;
+}
+
+.notification {
+  width: 100%;
+  position: relative;
+  top: 0;
+  text-align: center;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.notice,
+.alert {
+  margin: 0;
+}
+
+.is-primary {
+  color: #fff;
+  background-color: rgb(42, 199, 42);
+}
+
+.is-danger {
+  color: #fff;
+  background-color: rgb(236, 26, 26);
+}
+
+.menu {
+  padding: 5px;
+  background-color: rgba(150, 169, 172, 0.466);
+  color: #fff;
+}
+
+.menu span {
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: indigo;
+  padding: 0 20px;
+  font-style: italic;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+label {
+  display: inline-block;
+  margin: 20px 0 5px 0;
+}
+
+.form-label {
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  height: 40px;
+  width: 120px;
+  box-sizing: border-box;
+}
+
+.header-label {
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0 20px;
+  margin-bottom: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  box-sizing: border-box;
+  color: rgb(14, 14, 158);
+}
+
+.my-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  background: asset_url("check-off.png") no-repeat right 10px top 5px;
+  background-size: 24px 24px;
+  width: 120px;
+  height: 40px;
+  right: 0;
+  margin: 0 20px;
+  cursor: pointer;
+  border: 1px solid gray;
+  margin-bottom: -13px;
+  border-radius: 4px;
+}
+
+.my-checkbox:checked {
+  background-image: asset_url("check-on.png");
+}
+
+input[type="submit"] {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 40px;
+  width: 160px;
+
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 4px 4px #ccc;
+}
+
+input[type="submit"]:active {
+  box-shadow: 0 0 2px 2px #ccc;
+  border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 5px;
+  font-size: large;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.title-box,
+textarea {
+  width: 98%;
+}
+
+.form_paragraph {
+  box-sizing: border-box;
+  padding: 0;
+  margin-top: 20px;
+
+  height: 40px;
+  border: 1px solid black;
+}
+
+.posts {
+  margin: 40px 0;
+}
+
+.posts .author {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: indigo;
+  font-style: italic;
+  text-align: right;
+}
+
+.post-title {
+  text-decoration: underline;
+  color: black;
+}
+
+.post-body {
+  color: #555;
+}

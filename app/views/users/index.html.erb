@@ -1,0 +1,22 @@
+<h1>Members List</h1>
+
+<label class="header-label">Name</label>
+<label class="header-label">Is Admin</label>
+<label class="header-label">Is Member</label>
+
+<% @users.each do |u| %>
+  
+  <%= form_for u, url: user_path(u), method: "patch" do |f| %>
+
+      <label class="form-label"><%= u.name %></label>
+
+      <%= f.check_box :is_admin, class: "my-checkbox" %>
+
+      <%= f.check_box :is_member, class: "my-checkbox" %>
+    
+      <%= f.submit 'Set', class: "form_submit" %>
+
+  <%end %>
+
+<% end %>
+
