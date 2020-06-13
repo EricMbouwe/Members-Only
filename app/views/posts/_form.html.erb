@@ -1,0 +1,10 @@
+<%= form_for(@post) do |f| %>
+
+  <%= f.label 'Title', class: "text-label" %><br>
+  <%= f.text_field :title,  value: @post.title, autofocus: true, class: "title-box" %><br>
+  <%= f.label 'Body', class: "text-label" %><br>
+  <%= f.text_area :body,  placeholder: "Compose a new post...", size: "60x10"  %><br>
+
+  <%= f.submit 'Add New Post' %>
+
+<% end %>
